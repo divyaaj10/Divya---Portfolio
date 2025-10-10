@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya A J – Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('projects') }}">Projects</a></li>
+      <li><a href="{{ url_for('certificates') }}">Certificates</a></li>
+    </ul>
+  </nav>
+
+  <!-- Personal Details Section -->
+  <section class="personal-details">
+    <div class="profile-container">
+      <img class="profile-photo" src="{{ url_for('static', filename='images/myphoto.jpg') }}" alt="Divya A J">
+      <h1 class="name-title">Divya A J</h1>
+      <p class="subtitle">MCA Student | Data Analytics Enthusiast | Python • Power BI • SQL</p>
+    </div>
+
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm <strong>Divya A J</strong>, currently pursuing my <strong>Master of Computer Applications (MCA)</strong>
+        at <strong>Cambridge Institute of Technology</strong>. I’m an aspiring <strong>Data Analyst</strong> who loves
+        turning raw data into meaningful insights through visualization and analysis.
+      </p>
+      <p>
+        My areas of interest include <strong>data cleaning, data visualization, storytelling through dashboards, and
+        predictive analytics</strong>. I’m skilled in using <strong>Power BI</strong> for interactive dashboards,
+        <strong>Python</strong> for analytics and automation, <strong>Excel</strong> for data management, and
+        <strong>SQL</strong> for database querying.
+      </p>
+      <p>
+        I’m passionate about building impactful projects that combine analytics, design, and technology.
+        I enjoy learning continuously and exploring new tools that help in better decision-making through data.
+      </p>
+    </div>
+
+    <div class="info-section">
+      <h3>Contact Information</h3>
+      <ul>
+        <li><strong>Email:</strong> divyaaj@gmail.com</li>
+        <li><strong>Phone:</strong> +91-XXXXXXXXXX</li>
+        <li><strong>Location:</strong> Bengaluru, India</li>
+      </ul>
+    </div>
+
+    <div class="info-section">
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>Power BI</li>
+        <li>SQL</li>
+        <li>Excel</li>
+        <li>Data Visualization</li>
+        <li>Data Cleaning</li>
+        <li>Machine Learning Basics</li>
+        <li>Dashboard Design</li>
+      </ul>
+    </div>
+
+    <div class="info-section">
+      <h3>Education</h3>
+      <p><strong>Master of Computer Applications (MCA)</strong> – Cambridge Institute of Technology</p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/divyaaj10mca2025/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/divyaaj10" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Divya A J</p>
+  </footer>
+
+</body>
+</html>

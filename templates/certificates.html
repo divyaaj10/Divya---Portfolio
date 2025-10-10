@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya A J – Certificates</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #000;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px 20px;
+      background-color: #000;
+      border-radius: 10px;
+    }
+
+    .section-heading {
+      text-align: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .certificates-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .cert-card {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+      transition: transform 0.3s;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cert-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .cert-card h3 {
+      color: #ffffff;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('projects') }}">Projects</a></li>
+      <li><a href="{{ url_for('certificates') }}">Certificates</a></li>
+    </ul>
+  </nav>
+
+  <!-- Certificates Section -->
+  <section>
+    <h2 class="section-heading">Certificates</h2>
+    <div class="certificates-grid">
+      <div class="cert-card">
+        <img src="{{ url_for('static', filename='images/DataAnalytics.png') }}" alt="Certificate 1">
+        <h3>Data Analytics with Python</h3>
+      </div>
+      <div class="cert-card">
+        <img src="{{ url_for('static', filename='images/powerBi.png') }}" alt="Certificate 2">
+        <h3>PowerBI </h3>
+      </div>
+      <div class="cert-card">
+        <img src="{{ url_for('static', filename='images/infosys.png') }}" alt="Certificate 3">
+        <h3>Introduction to Data Science</h3>
+      </div>
+      <div class="cert-card">
+        <img src="{{ url_for('static', filename='images/hackerank.png') }}" alt="Certificate 3">
+        <h3>SQL from HackerRank</h3>
+      </div>
+      <div class="cert-card">
+        <img src="{{ url_for('static', filename='images/java.png') }}" alt="Certificate 3">
+        <h3>Java from Capgemini</h3>
+      </div>
+      <!-- Add more certificates as needed -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Divya A J</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya A J – Projects</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .projects-section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px 20px;
+      background-color: #000000;
+      border-radius: 10px;
+    }
+
+    /* Main heading */
+    .projects-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 2.5em;
+    }
+
+    /* Project card */
+    .project-card {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Project title */
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    /* Paragraph text */
+    .project-card p {
+      font-size: 1em;
+      color: #cccccc;
+      line-height: 1.5;
+    }
+
+    /* Project images */
+    .project-card img {
+      width: 100%;
+      max-width: 250px;
+      display: block;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    /* Project video */
+    .project-card video {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin-top: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    }
+
+    /* GitHub button */
+    .project-card a.github-btn {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .github-travel { background-color: #4CAF50; }
+    .github-zomato { background-color: #2196F3; }
+    .github-churn { background-color: #FF5722; }
+    .github-excel { background-color: #FFC107; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('projects') }}">Projects</a></li>
+      <li><a href="{{ url_for('certificates') }}">Certificates</a></li>
+    </ul>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h2>My Projects</h2>
+
+    <!-- Travel Destination Recommender -->
+    <div class="project-card">
+      <h3><i class="fas fa-plane" style="margin-right: 8px; color: #4CAF50;"></i>Travel Destination Recommender</h3>
+      <p><strong>Objective:</strong> Provide personalized travel destination suggestions based on user preferences.</p>
+      <p><strong>Tools & Techniques:</strong> Python, Streamlit, pandas, collaborative & content-based filtering, CSV data handling, user login system, rating system.</p>
+      <img src="{{ url_for('static', filename='images/travel1.png') }}" alt="Travel Destination Project">
+      <img src="{{ url_for('static', filename='images/travel2.png') }}" alt="Travel Destination Project">
+      <a href="https://github.com/divyaaj10/Travel" target="_blank" class="github-btn github-travel">View Code on GitHub</a>
+    </div>
+
+    <!-- Zomato Trend Analysis -->
+    <div class="project-card">
+      <h3><i class="fas fa-hotel" style="margin-right: 8px; color: #2196F3;"></i>Zomato Trend Analysis</h3>
+      <p><strong>Objective:</strong> Analyze trends in Zomato data to help users make informed decisions.</p>
+      <p><strong>Tools & Techniques:</strong> Python, pandas, data preprocessing, filtering & sorting options.</p>
+      <img src="{{ url_for('static', filename='images/zomato.png') }}" alt="Zomato Project">
+      <img src="{{ url_for('static', filename='images/zomato1.png') }}" alt="Zomato Project">
+      <a href="https://github.com/divyaaj10/Zomato-Trend-Analysis" target="_blank" class="github-btn github-zomato">View Code on GitHub</a>
+    </div>
+
+    <!-- Churn Prediction Model -->
+    <div class="project-card">
+      <h3><i class="fas fa-chart-bar" style="margin-right: 8px; color: #FF5722;"></i>Churn Prediction Model</h3>
+      <p><strong>Objective:</strong> Predict potential customer churn to improve retention.</p>
+      <p><strong>Tools & Techniques:</strong> Python, pandas, scikit-learn, machine learning (Logistic Regression, Random Forest), Flask/Streamlit, data visualization dashboards.</p>
+      <video controls>
+        <source src="{{ url_for('static', filename='video/realtime.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://github.com/yourusername/churn-prediction" target="_blank" class="github-btn github-churn">View Code on GitHub</a>
+    </div>
+
+    <!-- Sales & HR Excel Dashboard -->
+    <div class="project-card">
+      <h3><i class="fas fa-chart-pie" style="margin-right: 8px; color: #FFC107;"></i>Sales & HR Excel Dashboard</h3>
+      <p><strong>Objective:</strong> Design interactive dashboards to analyze Sales and HR data for better decision-making.</p>
+      <p><strong>Tools & Techniques:</strong> Microsoft Excel, Pivot Tables, Charts (Bar, Line, Pie), Conditional Formatting, Data Cleaning, Data Analysis, Dashboard Design.</p>
+      <img src="{{ url_for('static', filename='images/dashboard.png') }}" alt="Sales & HR Dashboard Screenshot 1">
+      <img src="{{ url_for('static', filename='images/dashboard2.png') }}" alt="Sales & HR Dashboard Screenshot 2">
+      <a href="https://github.com/divyaaj10/ExcelDashboard" target="_blank" class="github-btn github-excel">View Code on GitHub</a>
+    </div>
+
+    <!-- Power BI Dashboard Project -->
+    <div class="project-card">
+      <h3><i class="fas fa-chart-line" style="margin-right: 8px; color: #FFC107;"></i>Power BI Sales Dashboard</h3>
+      <p><strong>Objective:</strong> Analyze sales trends, product performance, and monthly revenue KPIs with an interactive dashboard.</p>
+      <p><strong>Tools & Techniques:</strong> Power BI, DAX, Power Query, Data Visualization, KPI Cards, Interactive Charts.</p>
+      <img src="{{ url_for('static', filename='images/powerdashboard.png') }}" alt="Power BI Sales Dashboard">
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Divya A J</p>
+  </footer>
+
+</body>
+</html>
